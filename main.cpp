@@ -23,6 +23,11 @@ int main(int argc, char *argv[]){
         mergesort_start();
     }
 
+    // Merge Sort algorithm
+    if (!strcmp(argv[1], "complete-subtree")){
+        complete_subtree_init();
+    }
+
     else {
         printf("The algorithm specific is not found, printing help menu\n");
         _print_help();

@@ -12,12 +12,13 @@ set(CMAKE_CXX_FLAGS "-g -std=gnu++11 -Wall -Wextra -Wuninitialized \
 
 # looks for all c/c++ source files in algorithms directory
 file(GLOB algorithm_files "algorithms/*.c*")
-
 add_executable(algorithms_main main.cpp ${algorithm_files})
+
 
 include_directories(
         include/
-)
+        )
+
 
 install (
         TARGETS                 algorithms_main

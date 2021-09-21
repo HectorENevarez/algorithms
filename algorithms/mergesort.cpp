@@ -12,21 +12,7 @@
 #define MERGESORT_ARRAY_SIZE    11  // array size of array to be sorted
 #define MAX_RAND_NUMBER         25  // max random value
 
-// TODO: work on printing the tree
-// prints the mergesort step by step
-static void _print_merge_tree(int array[]){
-    // at the lowest level calculate how many subarrays will be printed
-    // take ceiling in order to account for subarrays with only one index
-    // this will only happen on negative array sizes
-    static int num_subarrays = ceil((float)MERGESORT_ARRAY_SIZE / 2);
-    
-    // subarray counter for printing newline to format
-    static int subarrays_counter = 0;
-
-    printf("[ %d %d]\n", array[0], array[1]);
-    
-}
-
+// merge seperate arrays into one
 static void _merge(int array[], int left, int mid, int right){
     int idx;
     
@@ -74,11 +60,9 @@ static void _merge(int array[], int left, int mid, int right){
         merged_array_idx++;
     }
     
-    // print results of merge
-    // _print_merge_tree(left_array);
-    // _print_merge_tree(right_array);
 }
 
+// recursively call mergesort algorithm
 static void _mergesort(int array[], int start, int end){
     if (start >= end) return; // return recursively
 
@@ -88,6 +72,7 @@ static void _mergesort(int array[], int start, int end){
     _merge(array, start, mid, end); // merge
 }
 
+// start the mergesort process
 int mergesort_start(){
     // initialize array of chosen size
     int unsorted_array[MERGESORT_ARRAY_SIZE] = {0};
