@@ -86,8 +86,6 @@ int complete_subtree_init(){
     root->left->right = _new_node(5);
     root->left->left = _new_node(20);
     root->right->left = _new_node(45);
-    // root->right->right = _new_node(70);
-    //root->left->left->right->left = _new_node(10);
 
     node_return_t results = _complete_subtree(root);
 

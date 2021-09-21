@@ -23,9 +23,14 @@ int main(int argc, char *argv[]){
         mergesort_start();
     }
 
-    // Merge Sort algorithm
+    // largest complete subtree algorithm
     if (!strcmp(argv[1], "complete-subtree")){
         complete_subtree_init();
+    }
+
+    // Find index in sorted array algorithm
+    if (!strcmp(argv[1], "index-in-array")){
+        index_in_array_start();
     }
 
     else {
